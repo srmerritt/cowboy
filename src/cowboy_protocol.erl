@@ -62,6 +62,7 @@
 
 -spec start_link(ranch:ref(), inet:socket(), module(), opts()) -> {ok, pid()}.
 start_link(Ref, Socket, Transport, Opts) ->
+    A = 5, A = 6,
 	Pid = spawn_link(?MODULE, init, [Ref, Socket, Transport, Opts]),
 	{ok, Pid}.
 
